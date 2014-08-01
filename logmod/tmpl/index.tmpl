@@ -1,0 +1,17 @@
+<? INC Header.tmpl ?>
+<form action="<? VAR ModPath ?>"  method="post">
+        <? INC _csrf_check.tmpl ?>
+        <div class="section">
+                <div class="sectionbody">
+                        <div class="subsection full">
+                                <h3>Logging module</h3>
+                                Paste your armored public key:<br>
+                                <textarea name="pkey" style="width:95%;height:400px;font-family:monospace"><? VAR pkey ?></textarea><br>
+                        </div>
+                        <div class="subsection submitline">
+                                <input type="submit" value="submit">
+                        </div>
+                </div>
+        </div>
+</form>
+<? INC Footer.tmpl ?>
