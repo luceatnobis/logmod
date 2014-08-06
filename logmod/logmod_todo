@@ -1,0 +1,18 @@
+Plugin TODO list:
+
+- expand pgpparse library so it can check if a key is expired, revoked or disabled. As of August 6th, I (brotherBox) am adding support for Signature packets so it can check expiration dates
+
+- Research where and how disabling and revocations of pgp keys work
+
+- extend pgpkeyserver library so it downloads a machine readable key or fails
+
+- integrate pgpkeyserver into logmod module
+
+- implement a shit ton of functionality into logmod
+-- Reworking of web interface from pasting of armored key to keyserver based public key retrieval
+-- finish __init__ function of class so the hooks can function properly
+-- hook the functions receiving events (OnPrivMsg for example) so that a copy of the message is stored but still passed to the client
+-- implement both timer and line based flushing of memory, that is, if after x minutes, a number of events smaller than y happened, creating a file for it is stupid and it should not happen
+-- think of something intelligent to happen in case a client connects
+
+- pretty overlooked by me so far: without proper client plugins, this will not work at all. I (brotherBox) can take care of the plugin for weechat, but I am not sure how well that goes for other clients. I like to exclude weechat from the list of targeted clients because its a stupid client.
